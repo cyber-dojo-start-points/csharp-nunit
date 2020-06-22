@@ -1,12 +1,14 @@
 {
-  "image_name": "cyberdojofoundation/csharp_nunit",
+  "image_name": "cyberdojofoundation/csharp_nunit:1452bb7",
   "display_name": "C#, NUnit",
   "visible_filenames": [
     "HikerTest.cs",
     "Hiker.cs",
     "cyber-dojo.sh"
   ],
-  "filename_extension": [ ".cs" ],
+  "filename_extension": [
+    ".cs"
+  ],
   "max_seconds": 10,
   "tab_size": 4
 }
