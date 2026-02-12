@@ -10,13 +10,12 @@ function cyber_dojo_enter()
 function cyber_dojo_exit()
 {
   : # 2. Remove text files we don't want returned.
-  cyber_dojo_delete_dirs /sandbox/dojo/bin 
-  cyber_dojo_delete_dirs /sandbox/dojo/obj
+  cyber_dojo_delete_dirs /sandbox/bin 
+  cyber_dojo_delete_dirs /sandbox/obj
   #cyber_dojo_delete_files ...
 }
 cyber_dojo_enter
 trap cyber_dojo_exit EXIT SIGTERM
 
-cd dojo
 dotnet restore --source /home/sandbox/.nuget/packages/
 dotnet test --no-restore
