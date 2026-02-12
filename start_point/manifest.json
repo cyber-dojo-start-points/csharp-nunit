@@ -1,14 +1,15 @@
 {
-  "image_name": "cyberdojofoundation/csharp_nunit:1452bb7",
+  "image_name": "ghcr.io/cyber-dojo-languages/csharp_nunit:34f4686",
   "display_name": "C#, NUnit",
   "visible_filenames": [
-    "HikerTest.cs",
-    "Hiker.cs",
-    "cyber-dojo.sh"
+    "cyber-dojo.sh",
+    "dojo/HikerTest.cs",
+    "dojo/Hiker.cs",
+    "dojo/dojo.csproj"
   ],
   "filename_extension": [
     ".cs"
   ],
-  "max_seconds": 10,
+  "max_seconds": 20,
   "tab_size": 4
 }
