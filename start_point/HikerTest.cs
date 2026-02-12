@@ -1,5 +1,3 @@
-namespace dojo;
-
 using NUnit.Framework;
 
 public class HikerTest

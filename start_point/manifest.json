@@ -3,9 +3,9 @@
   "display_name": "C# 10.0.103, NUnit 4.3.2",
   "visible_filenames": [
     "cyber-dojo.sh",
-    "dojo/HikerTest.cs",
-    "dojo/Hiker.cs",
-    "dojo/dojo.csproj"
+    "HikerTest.cs",
+    "Hiker.cs",
+    "dojo.csproj"
   ],
   "filename_extension": [
     ".cs"
