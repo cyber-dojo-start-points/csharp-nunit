@@ -17,5 +17,10 @@ function cyber_dojo_exit()
 cyber_dojo_enter
 trap cyber_dojo_exit EXIT SIGTERM
 
-dotnet restore --source /home/sandbox/.nuget/packages/
+# Instead of running the command
+# dotnet restore --source /home/sandbox/.nuget/packages/
+# create a symlink to an obj/ dir (created in the docker-image)
+# This saves ~1.5 seconds.
+ln -s /home/sandbox/dotnet_obj obj
+
 dotnet test --no-restore --nologo
