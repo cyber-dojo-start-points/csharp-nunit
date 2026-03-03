@@ -1,11 +1,12 @@
 {
-  "image_name": "ghcr.io/cyber-dojo-languages/csharp_nunit:e5fac84",
+  "image_name": "ghcr.io/cyber-dojo-languages/csharp_nunit:d519785",
   "display_name": "C# 10.0.103, NUnit 4.3.2",
   "visible_filenames": [
     "cyber-dojo.sh",
     "HikerTest.cs",
     "Hiker.cs",
-    "dojo.csproj"
+    "dojo.csproj",
+    "dojo.runtimeconfig.json"
   ],
   "rag_lambda": "red_amber_green.rb",
   "filename_extension": [

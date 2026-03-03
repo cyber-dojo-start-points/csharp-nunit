@@ -4,15 +4,31 @@
     <TargetFramework>net10.0</TargetFramework>
     <LangVersion>latest</LangVersion>
     <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
+    <Nullable>disable</Nullable>
     <IsPackable>false</IsPackable>
+    <EnforceCodeStyleInBuild>false</EnforceCodeStyleInBuild>
+    <AnalysisLevel>none</AnalysisLevel>
+    <EnableNETAnalyzers>false</EnableNETAnalyzers>
+
+    <Optimize>true</Optimize>
+    <SatelliteResourceLanguages>en</SatelliteResourceLanguages>  <!-- No extra lang packs -->
+
+    <!-- Help Roslyn / build go faster -->
+    <NoWarn>$(NoWarn);CS1701;CS1702</NoWarn> <!-- minor warning noise -->
+    <EnforceCodeStyleInBuild>false</EnforceCodeStyleInBuild> <!-- already have -->
+
+    <!-- If no large constants / resources -->
+    <UseRidGraph>false</UseRidGraph>
+
+    <EnableNUnitRunner>true</EnableNUnitRunner>  <!-- Enables MTP-based NUnit runner -->
+    <OutputType>Exe</OutputType> <!-- Builds a runnable exe -->
+    <Optimize>true</Optimize>
+    <DebugType>embedded</DebugType> <!-- No separate .pdb file → faster emit -->
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="coverlet.collector" Version="6.0.4" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.14.0" />
     <PackageReference Include="NUnit" Version="4.3.2" />
-    <PackageReference Include="NUnit.Analyzers" Version="4.7.0" />
     <PackageReference Include="NUnit3TestAdapter" Version="5.0.0" />
   </ItemGroup>
 

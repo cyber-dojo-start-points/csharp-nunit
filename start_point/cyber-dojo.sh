@@ -17,10 +17,24 @@ function cyber_dojo_exit()
 cyber_dojo_enter
 trap cyber_dojo_exit EXIT SIGTERM
 
-# Instead of running the command
-# dotnet restore --source /home/sandbox/.nuget/packages/
-# create a symlink to an obj/ dir (created in the docker-image)
-# This saves ~1.5 seconds.
-ln -s /home/sandbox/dotnet_obj obj
+# get the dlls
+dotnet build \
+  --configuration Release \
+  --no-incremental \
+  --source /home/sandbox/.nuget/packages/
 
-dotnet test --no-restore --nologo
+cp /sandbox/bin/Release/net10.0/*.dll .
+
+CSC_DLL=/usr/share/dotnet/sdk/10.0.103/Roslyn/bincore/csc.dll
+NUNIT_PATH=/home/sandbox/.nuget/packages/nunit/4.3.2/lib/net8.0
+
+dotnet "$CSC_DLL" \
+  -target:library \
+  -out:dojo.dll \
+  -r:"${NUNIT_PATH}/nunit.framework.dll" \
+  -r:/usr/share/dotnet/shared/Microsoft.NETCore.App/10.0.3/System.Private.CoreLib.dll \
+  -r:/usr/share/dotnet/shared/Microsoft.NETCore.App/10.0.3/System.Runtime.dll \
+  *.cs
+
+dotnet test dojo.dll --nologo
+
