@@ -36,6 +36,6 @@ dotnet "$CSC_DLL" \
   -r:/usr/share/dotnet/shared/Microsoft.NETCore.App/10.0.3/System.Runtime.dll \
   *.cs
 
-dotnet test dojo.dll --nologo
+#dotnet test dojo.dll --nologo
 # ~0.5 seconds faster:
-#/home/sandbox/.dotnet/tools/nunit dojo.dll --noheader
+/home/sandbox/.dotnet/tools/nunit dojo.dll --noheader
