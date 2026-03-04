@@ -12,30 +12,22 @@ function cyber_dojo_exit()
   : # 2. Remove text files we don't want returned.
   cyber_dojo_delete_dirs /sandbox/bin 
   cyber_dojo_delete_dirs /sandbox/obj
-  #cyber_dojo_delete_files ...
+  #not working:
+  cyber_dojo_delete_files TestResult.xml
 }
 cyber_dojo_enter
 trap cyber_dojo_exit EXIT SIGTERM
 
-# get the dlls
-dotnet build \
-  --configuration Release \
-  --no-incremental \
-  --source /home/sandbox/.nuget/packages/
+#FALLBACK, SLOWER ~5.4s: 
+# comment in next line if compilation fails
+#time (ln -s /home/sandbox/dotnet_obj obj && dotnet test --no-restore --nologo ) && exit
 
-cp /sandbox/bin/Release/net10.0/*.dll .
-
-CSC_DLL=/usr/share/dotnet/sdk/10.0.103/Roslyn/bincore/csc.dll
-NUNIT_PATH=/home/sandbox/.nuget/packages/nunit/4.3.2/lib/net8.0
-
-dotnet "$CSC_DLL" \
+#FAST ~1.2s: 
+ln -s ~/.nuget/packages/nunit/4.3.2/lib/net8.0/nunit.framework.dll nunit.framework.dll
+time (dotnet /usr/share/dotnet/sdk/10.0.103/Roslyn/bincore/csc.dll \
   -target:library \
   -out:dojo.dll \
-  -r:"${NUNIT_PATH}/nunit.framework.dll" \
+  -r:/home/sandbox/.nuget/packages/nunit/4.3.2/lib/net8.0/nunit.framework.dll \
   -r:/usr/share/dotnet/shared/Microsoft.NETCore.App/10.0.3/System.Private.CoreLib.dll \
   -r:/usr/share/dotnet/shared/Microsoft.NETCore.App/10.0.3/System.Runtime.dll \
-  *.cs
-
-#dotnet test dojo.dll --nologo
-# ~0.5 seconds faster:
-/home/sandbox/.dotnet/tools/nunit dojo.dll --noheader
+  *.cs && /home/sandbox/.dotnet/tools/nunit dojo.dll --noheader --noresult --nocolor )
