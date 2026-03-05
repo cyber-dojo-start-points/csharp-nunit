@@ -9,17 +9,16 @@ function cyber_dojo_enter()
 }
 function cyber_dojo_exit()
 {
-  : # 2. Remove text files we don't want returned.
+  : # 2. Remove new text files we don't want returned.
   cyber_dojo_delete_dirs /sandbox/bin 
   cyber_dojo_delete_dirs /sandbox/obj
-  #not working:
   cyber_dojo_delete_files TestResult.xml
 }
 cyber_dojo_enter
 trap cyber_dojo_exit EXIT SIGTERM
 
 #FALLBACK, SLOWER ~5.4s: 
-# comment in next line if compilation fails
+# comment in the next line if compilation fails
 #time (ln -s /home/sandbox/dotnet_obj obj && dotnet test --no-restore --nologo ) && exit
 
 #FAST ~1.2s: 
