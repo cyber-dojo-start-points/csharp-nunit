@@ -25,6 +25,7 @@ trap cyber_dojo_exit EXIT SIGTERM
 ln -s ~/.nuget/packages/nunit/4.3.2/lib/net8.0/nunit.framework.dll nunit.framework.dll
 time (dotnet /usr/share/dotnet/sdk/10.0.103/Roslyn/bincore/csc.dll \
   -target:library \
+  -nologo \
   -out:dojo.dll \
   -r:/home/sandbox/.nuget/packages/nunit/4.3.2/lib/net8.0/nunit.framework.dll \
   -r:/usr/share/dotnet/shared/Microsoft.NETCore.App/10.0.3/System.Private.CoreLib.dll \
