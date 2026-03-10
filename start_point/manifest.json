@@ -5,8 +5,7 @@
     "cyber-dojo.sh",
     "HikerTest.cs",
     "Hiker.cs",
-    "dojo.csproj",
-    "dojo.runtimeconfig.json"
+    "dojo.csproj"
   ],
   "rag_lambda": "red_amber_green.rb",
   "filename_extension": [
