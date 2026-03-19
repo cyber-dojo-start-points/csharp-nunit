@@ -23,11 +23,16 @@ trap cyber_dojo_exit EXIT SIGTERM
 
 #FAST ~1.2s: 
 ln -s ~/.nuget/packages/nunit/4.3.2/lib/net8.0/nunit.framework.dll nunit.framework.dll
+#use legacy asserts eg: AreEqual(42, 42)
+# needs on top of file: using static NUnit.Framework.Legacy.ClassicAssert;
+ln -s ~/.nuget/packages/nunit/4.3.2/lib/net8.0/nunit.framework.legacy.dll nunit.framework.legacy.dll 
+
 time (dotnet /usr/share/dotnet/sdk/10.0.103/Roslyn/bincore/csc.dll \
   -target:library \
   -nologo \
   -out:dojo.dll \
-  -r:/home/sandbox/.nuget/packages/nunit/4.3.2/lib/net8.0/nunit.framework.dll \
+  -r:nunit.framework.dll \
+  -r:nunit.framework.legacy.dll \
   -r:/usr/share/dotnet/shared/Microsoft.NETCore.App/10.0.3/System.Private.CoreLib.dll \
   -r:/usr/share/dotnet/shared/Microsoft.NETCore.App/10.0.3/System.Runtime.dll \
   *.cs && /home/sandbox/.dotnet/tools/nunit dojo.dll --noheader --noresult --nocolor )
