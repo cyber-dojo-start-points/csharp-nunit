@@ -23,7 +23,7 @@ trap cyber_dojo_exit EXIT SIGTERM
 
 #FAST ~1.2s: 
 ln -s ~/.nuget/packages/nunit/4.3.2/lib/net8.0/nunit.framework.dll nunit.framework.dll
-#use legacy asserts eg: AreEqual(42, 42)
+#use legacy asserts eg: AreEqual(42, 42);
 # needs on top of file: using static NUnit.Framework.Legacy.ClassicAssert;
 ln -s ~/.nuget/packages/nunit/4.3.2/lib/net8.0/nunit.framework.legacy.dll nunit.framework.legacy.dll 
 
