@@ -19,7 +19,7 @@ trap cyber_dojo_exit EXIT SIGTERM
 
 #FALLBACK, SLOWER ~5.4s: 
 # comment in the next line if compilation fails
-#time (ln -s /home/sandbox/dotnet_obj obj && dotnet test --no-restore --nologo ) && exit
+#time (ln -s /home/sandbox/dotnet_obj obj && dotnet test --no-restore --nologo ) ; exit
 
 #FAST ~1.2s: 
 ln -s ~/.nuget/packages/nunit/4.3.2/lib/net8.0/nunit.framework.dll nunit.framework.dll
