@@ -9,6 +9,7 @@
     <EnforceCodeStyleInBuild>false</EnforceCodeStyleInBuild>
     <AnalysisLevel>none</AnalysisLevel>
     <EnableNETAnalyzers>false</EnableNETAnalyzers>
+    <RunAnalyzers>false</RunAnalyzers>
 
     <Optimize>true</Optimize>
     <SatelliteResourceLanguages>en</SatelliteResourceLanguages>  <!-- No extra lang packs -->
@@ -30,10 +31,6 @@
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.14.0" />
     <PackageReference Include="NUnit" Version="4.3.2" />
     <PackageReference Include="NUnit3TestAdapter" Version="5.0.0" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Using Include="NUnit.Framework" />
   </ItemGroup>
 
 </Project>
