@@ -9,8 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+      - uses: cyber-dojo-start-points/pinned-checkout@main
 
       - name: Build Language-Start-Point image, test it
         run: ./run_tests.sh
