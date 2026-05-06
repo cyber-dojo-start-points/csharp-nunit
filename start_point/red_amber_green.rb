@@ -6,7 +6,7 @@ lambda { |stdout,stderr,status|
   return :red   if /^Failed!/.match(output)
 
   #nunit console runner:
-  return :green if /^\s+Overall result: Passed/.match(output)
+  return :green if /^\s+Overall result: (Passed|Warning)/.match(output) #'Warning' matches also Ignored tests
   return :red   if /^\s+Failed Tests/.match(output) 
   return :amber
 }
