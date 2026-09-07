@@ -1,7 +1,16 @@
 public class Hiker
 {
-    public static int Answer()
+    private readonly ILogger logger;
+
+    public Hiker(ILogger logger)
     {
-        return 6 * 9;
+        this.logger = logger;
+    }
+
+    public int Answer()
+    {
+        var answer = 6 * 9;
+        logger.Log($"the answer is {answer}");
+        return answer;
     }
 }

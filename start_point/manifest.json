@@ -1,5 +1,5 @@
 {
-  "image_name": "ghcr.io/cyber-dojo-languages/csharp_nunit:70e19ed",
+  "image_name": "ghcr.io/cyber-dojo-languages/csharp_nunit:419adec",
   "display_name": "C# 10.0.103, NUnit 4.3.2",
   "language": [
     "C#",
@@ -13,6 +13,7 @@
     "cyber-dojo.sh",
     "HikerTest.cs",
     "Hiker.cs",
+    "ILogger.cs",
     "dojo.csproj"
   ],
   "rag_lambda": "red_amber_green.rb",
