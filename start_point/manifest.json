@@ -1,13 +1,13 @@
 {
-  "image_name": "ghcr.io/cyber-dojo-languages/csharp_nunit:419adec",
-  "display_name": "C# 10.0.103, NUnit 4.3.2",
+  "image_name": "ghcr.io/cyber-dojo-languages/csharp_nunit:29b6fd1",
+  "display_name": "C# 10.0, NUnit 4.3",
   "language": [
     "C#",
-    "10.0.103"
+    "10.0"
   ],
   "test_framework": [
     "NUnit",
-    "4.3.2"
+    "4.3"
   ],
   "visible_filenames": [
     "cyber-dojo.sh",
