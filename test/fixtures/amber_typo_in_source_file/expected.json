@@ -1,0 +1,4 @@
+{
+  "max_output_lines": 12,
+  "matches": [ "^Hiker\\.cs\\([0-9]+,[0-9]+\\): error CS0103: The name 'sevn' does not exist in the current context$" ]
+}

@@ -1,0 +1,8 @@
+{
+  "match_counts": {
+    "^1\\) Failed : HikerTest\\.life_the_universe_and_everything$": 1,
+    "^  Overall result: Failed$": 1,
+    "^  Test Count: 1, Passed: 0, Failed: 1, Warnings: 0, Inconclusive: 0, Skipped: 0$": 1,
+    "^    Failed Tests - Failures: 1, Errors: 0, Invalid: 0$": 1
+  }
+}

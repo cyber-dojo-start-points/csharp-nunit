@@ -1,0 +1,9 @@
+{
+  "match_counts": {
+    "^[0-9]+\\) Failed : AnswerSizeTest\\.the_answer_is_three_digits_long$": 1,
+    "^[0-9]+\\) Failed : ": 1,
+    "^  Overall result: Failed$": 1,
+    "^  Test Count: 4, Passed: 3, Failed: 1, Warnings: 0, Inconclusive: 0, Skipped: 0$": 1,
+    "^    Failed Tests - Failures: 1, Errors: 0, Invalid: 0$": 1
+  }
+}

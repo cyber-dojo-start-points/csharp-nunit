@@ -1,0 +1,7 @@
+{
+  "matches": [ "^HikerTest\\.cs\\([0-9]+,[0-9]+\\): error CS1061: 'Hiker' does not contain a definition for 'Ansewr'" ],
+  "match_counts": {
+    "^  Test Count: ": 0,
+    "^  Overall result: ": 0
+  }
+}

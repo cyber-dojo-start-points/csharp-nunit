@@ -1,0 +1,7 @@
+{
+  "max_output_lines": 60,
+  "match_counts": {
+    "^  Overall result: Passed$": 1,
+    "^  Test Count: 3, Passed: 3, Failed: 0, Warnings: 0, Inconclusive: 0, Skipped: 0$": 1
+  }
+}

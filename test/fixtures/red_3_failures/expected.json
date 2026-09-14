@@ -1,0 +1,8 @@
+{
+  "match_counts": {
+    "^[0-9]+\\) Failed : HikerTest\\.": 3,
+    "^  Overall result: Failed$": 1,
+    "^  Test Count: 3, Passed: 0, Failed: 3, Warnings: 0, Inconclusive: 0, Skipped: 0$": 1,
+    "^    Failed Tests - Failures: 3, Errors: 0, Invalid: 0$": 1
+  }
+}

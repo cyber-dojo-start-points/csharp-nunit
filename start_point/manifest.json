@@ -1,9 +1,9 @@
 {
   "image_name": "ghcr.io/cyber-dojo-languages/csharp_nunit:29b6fd1",
-  "display_name": "C# 10.0, NUnit 4.3",
+  "display_name": "C# 14.0, NUnit 4.3",
   "language": [
     "C#",
-    "10.0"
+    "14.0"
   ],
   "test_framework": [
     "NUnit",

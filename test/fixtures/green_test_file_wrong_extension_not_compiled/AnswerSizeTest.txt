@@ -1,0 +1,19 @@
+using NUnit.Framework;
+
+// Saved as .txt rather than .cs. cyber-dojo.sh hands the compiler the files
+// that find names for *.cs, so this one is never compiled and NUnit never
+// sees the test. Calling it something other than HikerTest.cs would not have
+// been enough on its own: NUnit gathers tests by the [Test] attribute and
+// does not care which file they came from, so a .cs file under any name at
+// all still runs. The extension is what keeps this one out.
+//
+// The assertion below is one that would fail, so a green says this really
+// did not run rather than that it ran and passed.
+public class AnswerSizeTest
+{
+    [Test]
+    public void the_answer_is_three_digits_long()
+    {
+        Assert.That(new Hiker().Answer().ToString().Length, Is.EqualTo(3));
+    }
+}

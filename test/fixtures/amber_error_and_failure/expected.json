@@ -1,0 +1,9 @@
+{
+  "matches": [ "^System\\.IndexOutOfRangeException : Index was outside the bounds of the array\\.$" ],
+  "match_counts": {
+    "^[0-9]+\\) Failed : HikerTest\\.life_the_universe_and_everything$": 1,
+    "^[0-9]+\\) Error : HikerTest\\.the_answer_is_two_digits_long$": 1,
+    "^  Test Count: 2, Passed: 0, Failed: 2, Warnings: 0, Inconclusive: 0, Skipped: 0$": 1,
+    "^    Failed Tests - Failures: 1, Errors: 1, Invalid: 0$": 1
+  }
+}

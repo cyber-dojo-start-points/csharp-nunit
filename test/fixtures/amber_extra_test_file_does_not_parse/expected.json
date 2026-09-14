@@ -1,0 +1,7 @@
+{
+  "matches": [ "^AnswerSizeTest\\.cs\\([0-9]+,[0-9]+\\): error CS1026: \\) expected$" ],
+  "match_counts": {
+    "^  Test Count: ": 0,
+    "^  Overall result: ": 0
+  }
+}
