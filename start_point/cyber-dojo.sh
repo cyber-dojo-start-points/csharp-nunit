@@ -19,7 +19,7 @@ trap cyber_dojo_exit EXIT SIGTERM
 
 #FALLBACK, SLOWER ~5.4s: 
 # comment in the next line if compilation fails
-#time (ln -s /home/sandbox/dotnet_obj obj && dotnet test --no-restore --nologo ) ; exit
+#ln -s /home/sandbox/dotnet_obj obj && dotnet test --no-restore --nologo ; exit
 
 #FAST ~1.2s: 
 # One version of each package is installed, and those versions move, so each
@@ -45,7 +45,7 @@ ln -s $(echo ~/.nuget/packages/castle.core/*/lib/net6.0/Castle.Core.dll) Castle.
 readonly CSC=$(echo /usr/share/dotnet/sdk/*/Roslyn/bincore/csc.dll)
 readonly SHARED=$(echo /usr/share/dotnet/shared/Microsoft.NETCore.App/*)
 
-time (dotnet ${CSC} \
+dotnet ${CSC} \
   -target:library \
   -nologo \
   -out:dojo.dll \
@@ -61,4 +61,4 @@ time (dotnet ${CSC} \
   -r:${SHARED}/System.Linq.Expressions.dll \
   -r:${SHARED}/System.Collections.dll \
   -r:${SHARED}/System.Text.RegularExpressions.dll \
-  $(find . -name '*.cs') && /home/sandbox/.dotnet/tools/nunit dojo.dll --noheader --noresult --nocolor )
+  $(find . -name '*.cs') && /home/sandbox/.dotnet/tools/nunit dojo.dll --noheader --noresult --nocolor
