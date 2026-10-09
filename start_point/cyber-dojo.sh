@@ -2,6 +2,10 @@
 # Text files under /sandbox are automatically returned...
 source ~/cyber_dojo_fs_cleaners.sh
 
+# Must be 0. With W^X on, the .NET JIT keeps its code in a memfd that grows
+# past the runner's fsize ulimit, and dotnet aborts.
+export DOTNET_EnableWriteXorExecute=0
+
 function cyber_dojo_enter()
 {
   : # 1. Only return _newly_ generated reports.
