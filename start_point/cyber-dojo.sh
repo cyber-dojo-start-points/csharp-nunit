@@ -37,7 +37,7 @@ ln -s $(echo ~/.nuget/packages/nunit/*/lib/net8.0/nunit.framework.legacy.dll) nu
 # The two mocking libraries. Both are built on Castle DynamicProxy, which is
 # what Castle.Core.dll is, and both use the same version of it.
 ln -s $(echo ~/.nuget/packages/moq/*/lib/net6.0/Moq.dll) Moq.dll
-ln -s $(echo ~/.nuget/packages/nsubstitute/*/lib/net6.0/NSubstitute.dll) NSubstitute.dll
+ln -s $(echo ~/.nuget/packages/nsubstitute/*/lib/net8.0/NSubstitute.dll) NSubstitute.dll
 ln -s $(echo ~/.nuget/packages/castle.core/*/lib/net6.0/Castle.Core.dll) Castle.Core.dll
 
 # -nowarn:1701,1702 below: Moq was built against an older System.Linq.Expressions
