@@ -1,9 +1,9 @@
 {
-  "image_name": "ghcr.io/cyber-dojo-languages/csharp_nunit:4c758a9@sha256:a529793000e179f6abb0aaaffee1f7b3e08d07382080e6cf974199fe9ac0c2ae",
-  "display_name": "C# 14.0, NUnit 5.0.0",
+  "image_name": "ghcr.io/cyber-dojo-languages/csharp_nunit:4fa6d2e@sha256:8ee2c68ec74d043691ac542132da6dd0483d7b89b7b3cd662e68b9cc741ac111",
+  "display_name": "C# 15.0, NUnit 5.0.0",
   "language": [
     "C#",
-    "14.0"
+    "15.0"
   ],
   "test_framework": [
     "NUnit",
